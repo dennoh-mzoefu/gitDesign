@@ -1,0 +1,46 @@
+.project__manager {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project__nav {
+    /* background-color: rgba(229, 229, 253, 0.1); */
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+}
+
+.left__project__part {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    width: 100%;
+
+}
+
+.project__nav__button {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.project__nav__button>p {
+    padding-left: 3px;
+}
+
+.project__manager__body {
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+#nav__underline {
+    padding-bottom: 5px;
+    border-bottom: solid 1px rgba(0, 0, 0, .5);
+}
+
+.chat {
+    width: 30vw;
+}
