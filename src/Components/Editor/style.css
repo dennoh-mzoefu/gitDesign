@@ -1,0 +1,80 @@
+canvas {
+    margin: auto;
+    background: #ececec;
+    width: 70vw;
+}
+
+.btn-disabled {
+    color: #fff !important;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+
+}
+
+.custom-file {
+    display: flex;
+    height: 1.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-file input {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    min-height: 2rem;
+    width: 70vw;
+    background-color: re;
+
+}
+
+.custom-file-input {
+    height: 1.5rem;
+    width: 100;
+}
+
+.file__input {
+    /* background-color: black; */
+    margin-bottom: 10px;
+}
+
+.effects .filter-btn {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 8px 15px;
+    border-radius: 7px;
+}
+
+.filter,
+.effects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.effects>div {
+    margin: 10px 20px;
+}
+
+.filter .btn-disabled {
+    background-color: rgb(197, 139, 255);
+    padding: 5px 8px;
+    /* border-radius: 8px; */
+    margin: 0;
+}
+
+.filter>div {
+    margin: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.filter .filter-btn {
+    background-color: rgba(0, 0, 0, .7);
+    width: 15px;
+    padding: 5px 0;
+    margin: 0;
+}
