@@ -1,0 +1,197 @@
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home__link__nav {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.repo {
+    max-height: fit-content;
+    max-width: 40vw;
+}
+
+.repo>img {
+    min-height: 40vh;
+}
+
+.home__link__nav p {
+    margin-left: 5px;
+}
+
+.home__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.repo {
+    background-color: rgba(110, 110, 202, 0.55);
+    color: white;
+    width: 350px;
+    margin: 20px;
+    /* border: solid 1px; */
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.repo__icons,
+.repo__desc {
+    margin-left: 5px;
+    display: flex;
+
+}
+
+.repo__icons span {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.repo__icons span p {
+    margin-left: 3px;
+}
+
+.whole__create__repo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create__repo {
+    margin-top: 50px;
+    padding: 20px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px rgba(110, 110, 202, 0.15);
+    box-shadow: 5px 5px 5px 5px rgba(110, 110, 202, 0.55);
+
+}
+
+.input__desc {
+    font-weight: 500;
+}
+
+.repo__guidline {
+    color: gray;
+}
+
+.create__repo h2 {
+    font-weight: 700;
+    font-size: large;
+    color: rgba(110, 110, 202, 0.55);
+    /* margin-top: 15px; */
+}
+
+.create__repo__form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.create__repo__input {
+    margin-bottom: 20px;
+    max-width: 400px;
+    min-height: 2rem;
+    border-radius: 3px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.owner__repo__name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.repo__divider {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.upload__file__btn {
+    padding: 5px 18px;
+    border-radius: 2px;
+    background-color: rgba(110, 110, 202, 0.55);
+    width: fit-content;
+    border: solid 1px rgba(110, 110, 202, 0.15);
+    box-shadow: 5px 5px 5px rgba(110, 110, 202, 0.30);
+    /* background-color: brown; */
+}
+
+.div__btn__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project__card {
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 25px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 33vw;
+    min-height: 15vh;
+    border: solid 1px rgba(110, 110, 202, 0.15);
+}
+
+.project__name {
+    display: flex;
+    flex-direction: row;
+}
+
+.date__created>button>small {
+    padding: 0;
+    margin-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4%;
+    background-color: rgba(110, 110, 202, 0.55);
+    color: aliceblue;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.55);
+}
+
+.repositories {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.date__created {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project__card>div {
+    margin: 7px 0;
+}
+
+.icon {
+    font-size: large;
+    color: rgba(110, 110, 202, 0.95);
+}
+
+.date__created>p {
+    display: flex;
+}
