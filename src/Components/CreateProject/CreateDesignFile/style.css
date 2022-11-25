@@ -28,3 +28,110 @@ h4 {
 .whole__create__repo input:focus+.input-icon:after {
     border-right-color: #f0a500;
 }
+
+
+
+/* h1 {
+    color: #286090;
+    text-align: center;
+    margin: 30px 0;
+} */
+
+.custome-file {
+    background-color: rgba(150, 152, 250, 0.9);
+    color: white;
+    width: 250px;
+    height: 50px;
+    position: relative;
+}
+
+
+.custome-file .fa-upload {
+    color: white;
+    margin: 10px 20px;
+    font-size: 27px;
+}
+
+.custome-file input[type=file] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.custome-file input[type=file]:hover {
+    cursor: pointer;
+}
+
+.custome-file>div {
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+}
+
+.uploadFile {
+    width: fit-content;
+    background-color: white;
+    padding: 20px 70px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.or {
+    margin-top: 20px;
+}
+
+.design__files {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h4__add__file {
+    max-width: fit-content;
+    cursor: pointer;
+    min-width: 150px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 7px;
+}
+
+.lower__desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px;
+}
+
+.repo__btn p {
+    margin-right: 5px;
+}
+
+.repo__btn {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: fit-content;
+    padding: 6px;
+    color: white;
+}
+
+.repo__btn input {
+    width: 150px;
+}
+
+.repo__btn input[type=file]::file-selector-button {
+    width: 0;
+    height: 0;
+}
+
+.upload {
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    padding: 2px;
+    cursor: pointer;
+}

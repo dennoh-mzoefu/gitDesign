@@ -5,6 +5,7 @@ import "./style.css";
 import { createProject } from "../../../redux/actions/projectActions";
 import { error } from "../../../redux/actions/userActions";
 import { createDesignFile } from "../../../redux/actions/designFileActions";
+import { BsCloudUploadFill } from "react-icons/bs";
 
 function CreateDesignFile() {
   const dispatch = useDispatch();
@@ -81,15 +82,25 @@ function CreateDesignFile() {
     dispatch(createDesignFile(designFile))
       .then(() => {
         JSON.stringify(localStorage.setItem("designFile", designFile));
-        // navigate("/doe/home");
+        navigate("/doe/home");
       })
       .catch((err) => dispatch(error(err)));
   };
 
   return (
     <div className="whole__create__repo">
+      <div className="uploadFile">
+        <div className="custome-file">
+          <div>
+            <BsCloudUploadFill className=" fa-upload " aria-hidden="true" />
+            Upload Design
+          </div>
+          <input type="file" />
+        </div>
+      </div>
+      <h4 className="or">OR</h4>
       <div className="create__repo">
-        <h2>Upload a design file</h2>
+        <h2>Upload a design file through figma</h2>
         <p className="repo__guidline">{project?.projectName}</p>
         <form className="create__repo__form">
           <div className="owner__repo__name">
