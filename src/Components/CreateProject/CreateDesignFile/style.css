@@ -116,22 +116,29 @@ h4 {
     width: fit-content;
     padding: 6px;
     color: white;
+    border-radius: 50%;
 }
 
 .repo__btn input {
-    width: 150px;
+    width: 25px;
+    /* background-color: red; */
+    color: black;
 }
 
 .repo__btn input[type=file]::file-selector-button {
     width: 0;
     height: 0;
+    background-color: black;
+    color: black;
+    border: none;
 }
 
 .upload {
     color: black;
     background-color: white;
     border-radius: 50%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 2px;
     cursor: pointer;
+    margin-left: -23px;
 }
