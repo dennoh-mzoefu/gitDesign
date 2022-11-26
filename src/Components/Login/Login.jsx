@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { error, login } from "../../redux/actions/userActions";
@@ -25,12 +25,14 @@ function Login() {
       })
       .catch((err) => dispatch(error(err)));
   };
-  {
-    user && setName("user.name");
-  }
-  {
-    name && navigate(`/${user.name}/home`);
-  }
+  useEffect(() => {
+    {
+      user && setName("user.name");
+    }
+    {
+      name && navigate(`/${user.name}/home`);
+    }
+  }, [user]);
   return (
     <div>
       <LandingNav />
