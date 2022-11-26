@@ -4,9 +4,11 @@ import { useParams } from "react-router-dom";
 import CreateDesignFile from "../../CreateProject/CreateDesignFile/CreateDesignFile";
 import "./style.css";
 import { BsCloudUploadFill } from "react-icons/bs";
+import Versions from "./Versions/Versions";
 
 function DesignFiles({ project }) {
   const [display, setDisplay] = useState(false);
+  const [version, setVersion] = useState(false);
   const [file, setFile] = useState("");
   const { name, projectName } = useParams();
   const { design__files } = useSelector((state) => state.designFileReducer);
@@ -14,6 +16,10 @@ function DesignFiles({ project }) {
   const handleDisplay = (e) => {
     e.preventDefault();
     setDisplay((prevDisplay) => !prevDisplay);
+  };
+  const handleVersions = (e) => {
+    e.preventDefault();
+    setVersion((prevVersion) => !prevVersion);
   };
   const handleUpload = (e) => {
     e.preventDefault();
@@ -30,32 +36,43 @@ function DesignFiles({ project }) {
         design__files?.map((file, index) => {
           return (
             <Fragment key={index}>
-              <div className="repo">
-                {console.log({ file })}
-                <img
-                  alt="repo thumbnail"
-                  src={`${window.location.origin}/images/thumbnail/${file.thumbnailUrl}.png`}
-                />
-                <div className="lower__desc">
-                  <div className="repo__desc">
-                    <p>{file?.fileName}</p>
-                  </div>
-                  <div className="repo__desc repo__btn">
-                    <input
-                      type="file"
-                      onChange={(e) => setFile(e.target.files[0].name)}
-                      placeholder="Update Versions"
-                    />
-                    <BsCloudUploadFill
-                      className="upload"
-                      onClick={(e) => handleUpload(e)}
-                    />
+              <div className="above__repo">
+                <div className="repo">
+                  {console.log({ file })}
+                  <img
+                    alt="repo thumbnail"
+                    src={`${window.location.origin}/images/thumbnail/${file.thumbnailUrl}.png`}
+                  />
+                  <div className="lower__desc">
+                    {/* <div className="repo__desc">
+                      <p>{file?.fileName}</p>
+                    </div> */}
+                    <div className="side__btn">
+                      <h4
+                        className="h4__add__file"
+                        onClick={(e) => handleVersions(e)}
+                      >
+                        Versions
+                      </h4>
+                    </div>
+                    <div className="repo__desc repo__btn">
+                      <input
+                        type="file"
+                        onChange={(e) => setFile(e.target.files[0].name)}
+                        placeholder="Update Versions"
+                      />
+                      <BsCloudUploadFill
+                        className="upload"
+                        onClick={(e) => handleUpload(e)}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </Fragment>
           );
         })}
+      <Versions />
     </div>
   );
 }
