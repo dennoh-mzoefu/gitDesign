@@ -64,7 +64,7 @@ function PreApp() {
 
     // fetch project from local storage
     // var project = localStorage.getItem("project");
-    dispatch(fetchProjectLocalStorage(project));
+    // dispatch(fetchProjectLocalStorage(project));
   }, [auth]);
 
   useEffect(() => {

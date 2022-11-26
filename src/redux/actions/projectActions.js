@@ -63,6 +63,7 @@ export const deleteProject = (id) => async (dispatch) => {
 };
 
 export const fetchProjectLocalStorage = (data) => async (dispatch) => {
-  dispatch({ type: FETCH_PROJECT__LOCAL__STORAGE, payload: JSON.parse(data) });
+  const parseData = JSON.parse(data);
+  dispatch({ type: FETCH_PROJECT__LOCAL__STORAGE, payload: parseData });
   // console.log(JSON.parse(data));
 };
