@@ -53,6 +53,7 @@ function PreApp() {
     name && dispatch(getUser(name));
     name && dispatch(getDesignFiles(name));
     name && dispatch(getActivityLogs());
+    console.log({ name });
   }, [name]);
   useEffect(() => {
     var user = localStorage.getItem("user");
