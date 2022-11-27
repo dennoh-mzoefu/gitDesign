@@ -4,18 +4,18 @@ import "./style.css";
 function Versions() {
   return (
     <div className="versions">
-      <div class="section full-height">
+      <div className="section full-height">
         <input
-          class="modal-btn"
+          className="modal-btn"
           type="checkbox"
           id="modal-btn"
           name="modal-btn"
         />
-        <label for="modal-btn">
-          Open Modal <i class="uil uil-expand-arrows"></i>
-        </label>
-        <div class="modal">
-          <div class="modal-wrap">
+        {/* <label for="modal-btn">
+          Open Modal <i className="uil uil-expand-arrows"></i>
+        </label> */}
+        <div className="modal">
+          <div className="modal-wrap">
             <img src="https://assets.codepen.io/1462889/sl3.jpg" alt="" />
             <p>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -25,7 +25,7 @@ function Versions() {
           </div>
         </div>
 
-        {/* <a href="https://front.codes/" class="logo" target="_blank">
+        {/* <a href="https://front.codes/" className="logo" target="_blank">
           <img src="https://assets.codepen.io/1462889/fcy.png" alt="" />
         </a> */}
       </div>
