@@ -66,3 +66,9 @@ export const fetchNotifications = (receiver) =>
   axios.get(`${notification}/notify/${receiver}`);
 export const acceptNotification = (data1) =>
   axios.post(`${notification}/accept`, data1);
+
+// VERSION
+const version = "http://localhost:5000/version";
+export const fetchVersions = (designFile) =>
+  axios.get(`${version}/${designFile}`);
+export const createVersion = (versionFile) => axios.post(version, versionFile);
