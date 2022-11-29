@@ -20,10 +20,10 @@ export const getProjects = (ownerName) => async (dispatch) => {
     // console.log(error.message);
   }
 };
-export const getProject = (name) => async (dispatch) => {
+export const getProject = (projectName) => async (dispatch) => {
   try {
-    const { data } = await api.fetchProject(name);
-
+    const { data } = await api.fetchProject(projectName);
+    console.log({ data });
     dispatch({ type: FETCH_PROJECT, payload: data });
   } catch (error) {
     dispatch({ type: ERROR, payload: error.message });
@@ -40,7 +40,7 @@ export const createProject = (project) => async (dispatch) => {
     // console.log(error.message);
   }
 };
-
+//
 export const updateProject = (id, project) => async (dispatch) => {
   try {
     const { data } = await api.updateProject(id, project);
