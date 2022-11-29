@@ -10,7 +10,7 @@ export const createProject = (newProject) =>
   axios.post(`${url_project}`, newProject);
 
 export const fetchProject = (projectName) =>
-  axios.get(`${url_project}/${projectName}`);
+  axios.get(`${url_project}/view/${projectName}`);
 export const updateProject = (id, updatedProject) =>
   axios.patch(`${url_project}/${id}`, updatedProject);
 export const deleteProject = (id) => axios.delete(`${url_project}/${id}`);
@@ -68,7 +68,7 @@ export const acceptNotification = (data1) =>
   axios.post(`${notification}/accept`, data1);
 
 // VERSION
-const version = "http://localhost:5000/version";
+const version = "http://localhost:5000/versions";
 export const fetchVersions = (designFile) =>
-  axios.get(`${version}/${designFile}`);
+  axios.get(`${version}/${designFile} `);
 export const createVersion = (versionFile) => axios.post(version, versionFile);
