@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
       return { ...state, version: payload };
     case FETCH__VERSION:
       // console.log(payload);
-      let v = payload[pauload.length - 1].version;
+      let v = payload[payload.length - 1].version;
       return { ...state, versions: payload, versionNumber: v };
 
     default:
