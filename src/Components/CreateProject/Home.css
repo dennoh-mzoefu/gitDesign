@@ -16,7 +16,7 @@
 }
 
 .repo {
-    max-height: fit-content;
+    height: fit-content;
     max-width: 40vw;
 }
 
