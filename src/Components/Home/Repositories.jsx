@@ -7,6 +7,7 @@ import { Link, NavLink } from "react-router-dom";
 function Repositories() {
   const { projects } = useSelector((state) => state.projectReducer);
   const { user } = useSelector((state) => state.userReducer);
+  console.log({projects})
   let dateString = "";
   const handleDate = (d) => {
     var n = Date.parse(d);
