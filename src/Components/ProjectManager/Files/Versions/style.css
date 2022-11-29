@@ -3,6 +3,38 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
 
+.version__container {
+    background-color: red;
+}
+
+.version__div {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    /* box-shadow: 2px 2px 2px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.version__image {
+    width: 340px;
+    height: 250px;
+}
+
+.compare {
+    border-radius: 50%;
+    background-color: rgba(150, 152, 250, 0.9);
+    padding: 4px;
+    font-size: 1.5rem;
+    margin: 10px;
+
+}
+
+.compare__0 {
+    height: 0;
+    margin: 10px;
+}
 
 /* .versions {
     font-family: "Poppins", sans-serif;
