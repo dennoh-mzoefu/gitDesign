@@ -11,29 +11,22 @@ import Chat from "./Chat/Chat";
 import Collaborators from "./Collaborators/Collaborators";
 import DesignFiles from "./Files/DesignFiles";
 import { getChats } from "../../redux/actions/chatActions";
+import { AiOutlineWechat } from "react-icons/ai";
 
 function ProjectManager() {
   const [displayHome, setDisplayHome] = useState("files");
   const { projectName } = useParams();
   const { user } = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
-  useEffect(() => {
-    const data = {
-      projectName,
-      ownerName: user.name,
-    };
-    projectName && dispatch(getProject(data));
-  }, []);
+
   const { project } = useSelector((state) => state.projectReducer);
-  console.log(project);
-  // const chooseDisplay (e) => {
-  //   e.preventDefault();
-  //   setDisplayHome
-  // }
+
+  // console.log({ project });
   useEffect(() => {
     user &&
       projectName &&
       dispatch(getProjectDesignFiles({ name: project.name, projectName }));
+    // console.log({ project });
   }, [user, projectName]);
   useEffect(() => {
     dispatch(getChats(projectName));
@@ -53,10 +46,10 @@ function ProjectManager() {
           <div
             className="project__nav__button"
             id={displayHome === "tasks" ? "nav__underline" : ""}
-            onClick={() => setDisplayHome("tasks")}
+            onClick={() => setDisplayHome("chat")}
           >
-            <FaTasks />
-            <p>Tasks</p>
+            <AiOutlineWechat />
+            <p>Chat</p>
           </div>
           <div
             className="project__nav__button"
@@ -74,7 +67,11 @@ function ProjectManager() {
                 <DesignFiles project={project} />
               </div>
             )}
-            {displayHome === "tasks" && project && <div>{project.date}</div>}
+            {displayHome === "chat" && project && (
+              <div className="chat">
+                <Chat />
+              </div>
+            )}
             {displayHome === "collaborators" && project && (
               <div>
                 <Collaborators />
@@ -82,9 +79,6 @@ function ProjectManager() {
             )}
           </div>
         </div>
-      </div>
-      <div className="chat">
-        <Chat />
       </div>
     </div>
   );
