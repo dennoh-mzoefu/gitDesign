@@ -116,11 +116,11 @@ h4 {
     width: fit-content;
     padding: 6px;
     color: white;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 .repo__btn input {
-    width: 25px;
+    width: 45px;
     /* background-color: red; */
     color: black;
 }
@@ -136,7 +136,7 @@ h4 {
 .upload {
     color: black;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 20%;
     font-size: 1.3rem;
     padding: 2px;
     cursor: pointer;
