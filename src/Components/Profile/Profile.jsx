@@ -1,10 +1,8 @@
-import React from 'react'
-import Repository from '../Repository/Repository'
+import React from "react";
+import Repository from "../Repository/Repository";
 
 function Profile() {
-  return (
-    <div><Repository /></div>
-  )
+  return <div>profile</div>;
 }
 
-export default Profile
+export default Profile;
