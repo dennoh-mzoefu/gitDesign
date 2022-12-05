@@ -542,19 +542,19 @@ export const links = [
       // },
     ],
   },
-  {
-    title: "Socials",
-    links: [
-      // {
-      //   name: "Linkedin",
-      //   icon: <AiOutlineStock />,
-      // },
-      {
-        name: "faqs",
-        icon: <AiOutlineAreaChart />,
-      },
-    ],
-  },
+  // {
+  //   title: "Socials",
+  //   links: [
+  //     // {
+  //     //   name: "Linkedin",
+  //     //   icon: <AiOutlineStock />,
+  //     // },
+  //     {
+  //       name: "faqs",
+  //       icon: <AiOutlineAreaChart />,
+  //     },
+  //   ],
+  // },
   {
     title: "personal",
     links: [
