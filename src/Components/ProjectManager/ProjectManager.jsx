@@ -12,6 +12,9 @@ import Collaborators from "./Collaborators/Collaborators";
 import DesignFiles from "./Files/DesignFiles";
 import { getChats } from "../../redux/actions/chatActions";
 import { AiOutlineWechat } from "react-icons/ai";
+import io from "socket.io-client";
+
+const socket = io.connect("http://localhost:3001");
 
 function ProjectManager() {
   const [displayHome, setDisplayHome] = useState("files");
@@ -29,8 +32,18 @@ function ProjectManager() {
     // console.log({ project });
   }, [user, projectName]);
   useEffect(() => {
-    dispatch(getChats(projectName));
-  });
+    dispatch(getChats(project.projectName));
+  }, [project]);
+  const [username, setUsername] = useState(user.name);
+  const [room, setRoom] = useState(projectName);
+  const [showChat, setShowChat] = useState(false);
+
+  useEffect(() => {
+    if (username !== "" && room !== "") {
+      socket.emit("join_room", room);
+      setShowChat(true);
+    }
+  }, [user, projectName]);
   return (
     <div className="project__manager">
       <div className="left__project__part">
@@ -69,7 +82,11 @@ function ProjectManager() {
             )}
             {displayHome === "chat" && project && (
               <div className="chat">
-                <Chat />
+                <Chat
+                  socket={socket}
+                  username={user.name}
+                  room={project.projectName}
+                />
               </div>
             )}
             {displayHome === "collaborators" && project && (
