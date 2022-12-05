@@ -1,6 +1,7 @@
 import {
   ERROR,
   FETCH_PROJECT,
+  FETCH_COLLAB_PROJECTS,
   CREATE_PROJECT,
   UPDATE_PROJECT,
   FETCH_PROJECTS,
@@ -12,6 +13,8 @@ const initialState = {
   error: "False",
   project: "",
   projects: "",
+  collaborators: [],
+  collaboratorProjects: [],
 };
 export default (state = initialState, action) => {
   const { type, payload } = action;
@@ -29,6 +32,9 @@ export default (state = initialState, action) => {
       // console.log(payload);
       return { ...state, project: payload };
     case FETCH_PROJECTS:
+      // console.log(payload);
+      return { ...state, projects: payload };
+    case FETCH_COLLAB_PROJECTS:
       // console.log(payload);
       return { ...state, projects: payload };
     case UPDATE_PROJECT:
