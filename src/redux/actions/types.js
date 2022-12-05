@@ -23,6 +23,7 @@ export const FETCH_PROJECT = "FETCH_PROJECT";
 export const CREATE_PROJECT = "CREATE_PROJECT";
 export const UPDATE_PROJECT = "UPDATE_PROJECT";
 export const FETCH_PROJECTS = "FETCH_PROJECTS";
+export const FETCH_COLLAB_PROJECTS = "FETCH_COLLAB_PROJECTS";
 export const DELETE__PROJECT = "DELETE__PROJECT";
 
 //design file
@@ -36,6 +37,7 @@ export const FETCH_PROJECT__LOCAL__STORAGE = "FETCH_PROJECT__LOCAL__STORAGE";
 
 //activity log
 export const FETCH__ACTIVITY__LOGS = "FETCH__ACTIVITY__LOGS";
+export const CREATE__ACTIVITY__LOG = "CREATE__ACTIVITY__LOG";
 
 //chat
 export const FETCH__CHATS = "FETCH__CHATS";
