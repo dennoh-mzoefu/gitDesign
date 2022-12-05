@@ -30,3 +30,18 @@ export const versionDifferences = [
     differenceName: "Typography2-1",
   },
 ];
+
+export const figmaLinks = [
+  {
+    link: "https://www.figma.com/file/yFmHiQiiBGgPtBqYDLDDwp/Untitled?node-id=8%3A2&t=AsrpHs9p0wUdVYgv-0",
+    name: "Aviation",
+  },
+  {
+    link: "https://www.figma.com/file/xTUyAX40KJfxoYJMt2MISn/Untitled-(Copy)?node-id=1%3A3&t=1b3gZADVkunFpjkh-0",
+    name: "Aviation",
+  },
+  {
+    link: "https://www.figma.com/file/y05fbYjVVn2eehEzqxhh8Z/Aviation-landing-page-(Community)-(Copy)?node-id=2%3A6722&t=LmP07C4Fs1clh2zq-0",
+    name: "Aviation",
+  },
+];
