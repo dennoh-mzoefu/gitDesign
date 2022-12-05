@@ -2,9 +2,30 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
+.bottom__version {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(150, 152, 250, 0.9);
+    display: flex;
+    justify-content: space-around;
+}
+
+.faedit {
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    padding: 4px;
+}
 
 .version__container {
     background-color: red;
+}
+
+.version__left {
+    margin-right: 10px;
+    padding-bottom: 15px;
+    background-color: rgb(211, 208, 208);
 }
 
 .version__div {
@@ -13,27 +34,33 @@
     background-color: whitesmoke;
     /* box-shadow: 2px 2px 2px black; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .version__image {
-    width: 340px;
-    height: 250px;
+    width: 40vw;
+    height: 55vh;
+}
+
+.figma__links {
+    display: flex;
 }
 
 .compare {
     border-radius: 50%;
-    background-color: rgba(150, 152, 250, 0.9);
+    background-color: white;
+    color: black;
     padding: 4px;
-    font-size: 1.5rem;
-    margin: 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    /* margin: 10px; */
 
 }
 
 .compare__0 {
     height: 0;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 /* .versions {
