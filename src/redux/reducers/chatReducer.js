@@ -3,7 +3,7 @@ import { ERROR, FETCH__CHATS, SAVE__CHATS } from "../actions/types";
 const initialState = {
   error: "False",
   chat: "",
-  chats: "",
+  chats: [],
 };
 export default (state = initialState, action) => {
   const { type, payload } = action;
