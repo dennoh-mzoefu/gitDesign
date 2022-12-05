@@ -1,8 +1,12 @@
-import { ERROR, FETCH__ACTIVITY__LOGS } from "../actions/types";
+import {
+  ERROR,
+  FETCH__ACTIVITY__LOGS,
+  CREATE__ACTIVITY__LOG,
+} from "../actions/types";
 
 const initialState = {
   error: "False",
-  activityLogs: "",
+  activityLogs: [],
   activityLog: "",
 };
 export default (state = initialState, action) => {
@@ -13,7 +17,10 @@ export default (state = initialState, action) => {
       return { ...state, error: payload };
     case FETCH__ACTIVITY__LOGS:
       // console.log(payload);
-      return { ...state, design__files: payload };
+      return { ...state, activityLogs: payload };
+    case CREATE__ACTIVITY__LOG:
+      // console.log(payload);
+      return { ...state, activityLog: payload };
 
     default:
       return state;
