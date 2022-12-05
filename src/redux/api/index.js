@@ -52,9 +52,10 @@ export const deleteDesignFile = (id) =>
 
 const activity__log = "http://localhost:5000/activityLog";
 export const fetchActivityLogs = () => axios.get(activity__log);
+export const createActivityLog = (data) => axios.get(activity__log, data);
 
 const chat = "http://localhost:5000/chat";
-export const fetchChats = (room) => axios.get(chat, room);
+export const fetchChats = (room) => axios.get(`${chat}/${room}`);
 export const createChat = (chat1) => axios.post(`${chat}/chatSave`, chat1);
 
 //NOTIFICATION
