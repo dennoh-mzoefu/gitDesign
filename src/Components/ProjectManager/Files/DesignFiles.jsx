@@ -13,7 +13,7 @@ import AboveVersions from "./Versions/AboveVersions";
 
 function DesignFiles({ project }) {
   const [display, setDisplay] = useState(false);
-  const [version, setVersion] = useState(true);
+  const [version, setVersion] = useState(false);
   const [fille, setFile] = useState("");
   const { name, projectName } = useParams();
   const { design__files } = useSelector((state) => state.designFileReducer);
@@ -61,40 +61,45 @@ function DesignFiles({ project }) {
               <div>
                 <h3>{file.fileName}</h3>
                 <div className="above__repo">
-                  <div className="repo">
-                    {/* {console.log({ file })} */}
-                    <img
-                      alt="repo thumbnail"
-                      src={`${window.location.origin}/images/thumbnail/${file.thumbnailUrl}.png`}
-                    />
-                    <div className="lower__desc">
-                      {/* <div className="repo__desc">
+                  {version === false && (
+                    <div className="repo">
+                      {/* {console.log({ file })} */}
+                      <img
+                        alt="repo thumbnail"
+                        src={`${window.location.origin}/images/thumbnail/${file.thumbnailUrl}.png`}
+                      />
+                      <div className="lower__desc">
+                        {/* <div className="repo__desc">
                       <p>{file?.fileName}</p>
                     </div> */}
-                      <div className="side__btn">
-                        <h4
-                          className="h4__add__file"
-                          onClick={(e) => handleVersions(e)}
-                        >
-                          Versions
-                        </h4>
-                      </div>
-                      <div className="repo__desc repo__btn">
-                        <input
-                          type="file"
-                          onChange={(e) => setFile(e.target.files[0].name)}
-                          placeholder="Update Versions"
-                        />
-                        <BsCloudUploadFill
-                          className="upload"
-                          onClick={(e) => handleUpload(e, file)}
-                        />
+                        <div className="side__btn">
+                          <h4
+                            className="h4__add__file"
+                            onClick={(e) => handleVersions(e)}
+                          >
+                            Versions
+                          </h4>
+                        </div>
+                        <div className="repo__desc repo__btn">
+                          <input
+                            type="file"
+                            onChange={(e) => setFile(e.target.files[0].name)}
+                            placeholder="Update Versions"
+                          />
+                          <BsCloudUploadFill
+                            className="upload"
+                            onClick={(e) => handleUpload(e, file)}
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                   {version && (
                     <div className="version__design">
-                      <AboveVersions designFile={file.fileName} />
+                      <AboveVersions
+                        designFile={file.fileName}
+                        setVersion={setVersion}
+                      />
                     </div>
                   )}
                 </div>
