@@ -10,6 +10,16 @@ import {
 
 import * as api from "../api/index.js";
 
+// export const getCollabProjects = (ownerName) => async (dispatch) => {
+//   try {
+//     const { data } = await api.fetchCollabProjects(ownerName);
+
+//     dispatch({ type: FETCH_PROJECTS, payload: data });
+//   } catch (error) {
+//     dispatch({ type: ERROR, payload: error.message });
+//     // console.log(error.message);
+//   }
+// };
 export const getProjects = (ownerName) => async (dispatch) => {
   try {
     const { data } = await api.fetchProjects(ownerName);
